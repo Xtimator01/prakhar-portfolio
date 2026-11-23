@@ -1,0 +1,253 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prakhar | Data Analyst</title>
+    <link rel="stylesheet" href="{% static 'main/style.css' %}">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">P.</div>
+
+        <div>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#visualization">Visualization</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="intro">HELLO, I'M</p>
+
+            <h1>Prakhar <span>Mathur.</span></h1>
+
+            <h2>Data Analyst | Technology Enthusiast</h2>
+
+            <p>
+                I enjoy working with data, uncovering meaningful insights
+                and building solutions through technology.
+                Currently exploring Data Analytics and Web Development.
+            </p>
+            <div class="hero-buttons">
+
+            <a href="{% static 'main/files/Prakhar_Mathur_Resume.pdf' %}"
+            class="resume-btn hero-btn"
+            download>
+                Download Resume
+            </a>
+            <a href="#projects" class="primary-btn hero-btn">View My Work</a>
+            <a href="#contact" class="secondary-btn hero-btn">Contact Me</a>
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+            Your Photo Here
+        </div>
+
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-text">
+            I'm a Computer Engineering graduate interested in data analytics,
+            programming and technology. I enjoy transforming raw information
+            into useful insights and continuously developing my technical skills.
+        </p>
+    </section>
+
+    
+    <section id="skills">
+        <h2 class="section-title">Technical Skills</h2>
+
+        <p class="section-text">
+            Technologies and tools I use for data analysis,
+            programming and visualization.
+        </p>
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <h3>Programming</h3>
+                <p>Python</p>
+                <p>SQL</p>
+                <p>PL/SQL</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Data Analytics</h3>
+                <p>Microsoft Excel</p>
+                <p>Data Cleaning</p>
+                <p>Data Analysis</p>
+                <p>Data Visualization</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Visualization</h3>
+                <p>Tableau</p>
+                <p>Streamlit</p>
+                <p>Matplotlib</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Tools & Technologies</h3>
+                <p>Git & GitHub</p>
+                <p>NumPy</p>
+                <p>Pandas</p>
+                <p>Open3D</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    
+    
+    <section id="projects">
+        <h2 class="section-title">Featured Projects</h2>
+
+        <p class="section-text projects-intro">
+            A collection of technical projects combining data analytics,
+            machine learning and engineering.
+        </p>
+
+        <div class="project-grid">
+
+            <!-- PROJECT 1 -->
+            <div class="project-card">
+                <p class="project-category">MACHINE LEARNING</p>
+                <h3>AI-Powered Stock Market Prediction System</h3>
+
+                <p>
+                    Developed an LSTM-based stock prediction system
+                    using historical market data and technical indicators.
+                    Built an interactive Streamlit dashboard for stock
+                    exploration, visualization and predictive insights.
+                </p>
+
+                <div class="project-tags">
+                    <span>Python</span>
+                    <span>TensorFlow</span>
+                    <span>LSTM</span>
+                    <span>Pandas</span>
+                    <span>NumPy</span>
+                    <span>Streamlit</span>
+                    <span>yFinance</span>
+                </div>
+            </div>
+
+            <!-- PROJECT 2 -->
+            <div class="project-card">
+                <p class="project-category">DATA ANALYTICS & DATABASES</p>
+                <h3>Employee Payroll Management System</h3>
+
+                <p>
+                    Developed a payroll management and analytics system
+                    to automate salary computation using attendance,
+                    leave records and payroll policies. Designed a
+                    normalized database with stored procedures,
+                    functions and triggers, alongside Excel and
+                    Tableau dashboards for payroll and HR analytics.
+                </p>
+
+                    <div class="project-tags">
+                        <span>SQL</span>
+                        <span>PL/SQL</span>
+                        <span>Excel</span>
+                        <span>Tableau</span>
+                        <span>Data Analytics</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROJECT 3 -->
+            <div class="project-card">
+                <p class="project-category">ENGINEERING & 3D MAPPING</p>
+                <h3>3D Environment Reconstruction Using 2D LiDAR Scans</h3>
+
+                <p>
+                    Developed a low-cost 3D scanning system by rotating
+                    a 2D LiDAR sensor using a stepper motor. Transformed
+                    distance measurements into 2D environment maps and
+                    built a live visualization GUI. Achieved indoor
+                    mapping accuracy within ±5 cm during testing.
+                </p>
+
+                    <div class="project-tags">
+                        <span>NumPy</span>
+                        <span>Matplotlib</span>
+                        <span>Open3D</span>
+                        <span>Arduino IDE</span>
+                        <span>LiDAR</span>
+                    </div>
+                </div>
+            </div>
+
+        
+    <section id="visualization">
+
+        <h2 class="section-title">Interactive Data Visualization</h2>
+
+        <p class="section-text">
+            Explore an interactive stock price chart built using
+            Python, Django and Plotly.
+        </p>
+
+        <div class="chart-container">
+            {{ stock_chart|safe }}
+        </div>
+
+        <p class="chart-note">
+            Note: This chart uses illustrative sample data.
+        </p>
+
+    </section>
+    
+    <section id="contact">
+        <h2 class="section-title">Let's Connect</h2>
+
+        <p class="section-text">
+            I'm open to discussing Data Analytics opportunities,
+            collaborations and interesting projects.
+            Feel free to reach out.
+        </p>
+
+        <div class="contact-links">
+
+            <a href="mailto:prakharmathur50@gmail.com">
+                Email Me
+            </a>
+
+            <a href="https://www.linkedin.com/in/prakhar-mathur-6a2715270"
+                target="_blank" rel="noopener noreferrer">
+                LinkedIn
+            </a>
+
+            <a href="https://github.com/your-github"
+                target="_blank" rel="noopener noreferrer">
+                GitHub
+            </a>
+
+        </div>
+    </section>
+
+
+<footer>
+    <p>© 2026 Prakhar Mathur. All rights reserved.</p>
+    <p>Built with Python, Django, HTML & CSS.</p>
+</footer>
+
+</body>
+</html>
